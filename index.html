@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cupid's Canvas - A Valentine's Journey</title>
     <link rel="stylesheet" href="cupid-canvas.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -38,24 +39,78 @@
     </div>
 
     <!-- Page 2: Night Time Stroll -->
-    <div id="dinner" class="page">
-        <div class="page-content">
-            <h1>A Romantic Dinner</h1>
-            <p class="subtitle">An Interactive Garden of Love-Themed Elements</p>
-            <div class="section-body">
-                <p>The evening unfolds in an enchanted garden where rose petals dance in the gentle breeze and candlelight flickers across your beloved's face. A intimate table is set beneath a canopy of twinkling lights, as if the stars themselves have descended to witness this sacred moment.</p>
-                
-                <div class="interactive-garden">
-                    <div class="flower rose">🌹</div>
-                    <div class="flower tulip">🌷</div>
-                    <div class="flower daisy">🌼</div>
-                    <div class="flower cherry">🌸</div>
-                    <div class="flower heart">💕</div>
+    <div id="night-stroll" class="page">
+        <div class="page-content night-stroll-page">
+            <h1>A Night Time Stroll</h1>
+            <p class="subtitle">A Conclusion with Everlasting Love Theme</p>
+            
+            <!-- Night Scene Container -->
+            <div class="night-scene">
+                <!-- Sky with Moon -->
+                <div class="sky">
+                    <!-- Moon -->
+                    <div class="moon"></div>
+                    
+                    <!-- Clouds -->
+                    <div class="cloud cloud-1">
+                        <img src="assets/images/cloud.png" alt="cloud">
+                    </div>
+                    <div class="cloud cloud-2">
+                        <img src="assets/images/cloud.png" alt="cloud">
+                    </div>
+                    
+                    <!-- Fireflies -->
+                    <div class="fireflies">
+                        <div class="firefly"></div>
+                        <div class="firefly"></div>
+                        <div class="firefly"></div>
+                        <div class="firefly"></div>
+                        <div class="firefly"></div>
+                    </div>
                 </div>
                 
-                <p>Wine glasses clink softly as you toast to the beauty of this moment. The menu is written in the language of the heart—each course a declaration of affection, each bite a taste of eternal devotion. Laughter mingles with soft music, and time seems to pause.</p>
+                <!-- Ground/Path -->
+                <div class="ground">
+                    <!-- Trees -->
+                    <div class="tree tree-left">
+                        <img src="assets/images/tree.png" alt="tree">
+                    </div>
+                    <div class="tree tree-right">
+                        <img src="assets/images/tree.png" alt="tree">
+                    </div>
+                    
+                    <!-- Path elements -->
+                    <div class="path"></div>
+                    
+                    <!-- Couple -->
+                    <div class="couple">
+                        <img src="assets/images/couple.png" alt="couple walking">
+                    </div>
+                    
+                    <!-- Dog -->
+                    <div class="dog">
+                        <img src="assets/images/dog.png" alt="dog">
+                    </div>
+                    
+                    <!-- Bike Rider (far away) -->
+                    <div class="bike-rider">
+                        <span>🚴</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-body">
+                <p>As midnight approaches, you walk hand in hand through the quiet streets, the world seemingly asleep around you. Your faithful companion trots happily beside you, and above, the stars shine with renewed brilliance.</p>
                 
-                <p>In this garden of love, where every element speaks of romance and every moment is treasured, you realize that the greatest feast is simply being together, sharing this night, building memories that will last a lifetime.</p>
+                <p>The night air is cool and crisp, and gentle fireflies dance around you like tiny lanterns. The trees sway softly in the evening breeze, and clouds drift lazily across the glowing moon.</p>
+                
+                <p>In this moment, you know that what you share is eternal. Not just a night, not just a journey, but a love that will endure through all seasons.</p>
+                
+                <p><em>Click anywhere in the scene to send hearts floating into the night sky!</em></p>
+                
+                <div class="closing-message">
+                    <p>💕 Two souls, one love, infinite tomorrows. 💕</p>
+                </div>
             </div>
             <div class="nav-buttons">
                 <a href="#city-of-love" class="btn btn-secondary">← Back</a>
@@ -71,6 +126,14 @@
             <p class="subtitle">An Interactive Garden of Love-Themed Elements</p>
             <div class="section-body">
                 <p>The evening unfolds in an enchanted garden where rose petals dance in the gentle breeze and candlelight flickers across your beloved's face. A intimate table is set beneath a canopy of twinkling lights, as if the stars themselves have descended to witness this sacred moment.</p>
+                
+                <div class="interactive-garden">
+                    <div class="flower rose">🌹</div>
+                    <div class="flower tulip">🌷</div>
+                    <div class="flower daisy">🌼</div>
+                    <div class="flower cherry">🌸</div>
+                    <div class="flower heart">💕</div>
+                </div>
                 
                 <p>Wine glasses clink softly as you toast to the beauty of this moment. The menu is written in the language of the heart—each course a declaration of affection, each bite a taste of eternal devotion. Laughter mingles with soft music, and time seems to pause.</p>
                 
