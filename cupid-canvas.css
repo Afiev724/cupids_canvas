@@ -22,13 +22,270 @@
   }
 }
 
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #ffe5ec 0%, #fff5e6 100%);
+  color: #4a4a4a;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+/* Navigation */
+.navigation {
+  background: linear-gradient(90deg, var(--valentine-red) 0%, var(--love-purple) 100%);
+  padding: var(--space-4);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(255, 77, 109, 0.2);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.nav-title {
+  color: var(--vanilla);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--vanilla);
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: var(--space-2) var(--space-3);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
 /* CSS-only page navigation with :target */
 .page {
   display: none;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in-out forwards;
 }
 
 .page:target {
   display: block;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Page Content */
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-4);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(255, 77, 109, 0.1);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.page-content h1 {
+  color: var(--valentine-red);
+  font-size: 2.5rem;
+  margin-bottom: var(--space-2);
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--love-purple);
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: var(--space-4);
+  font-style: italic;
+}
+
+.section-body {
+  margin: var(--space-4) 0;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.section-body p {
+  margin-bottom: var(--space-3);
+  text-align: justify;
+  color: #5a5a5a;
+}
+
+/* Interactive Garden */
+.interactive-garden {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: var(--space-4) 0;
+  flex-wrap: wrap;
+  padding: var(--space-4);
+  background: linear-gradient(135deg, #fff0f5 0%, #ffe5f0 100%);
+  border-radius: 8px;
+}
+
+.flower {
+  font-size: 3rem;
+  animation: float 3s ease-in-out infinite;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.flower:hover {
+  transform: scale(1.2);
+}
+
+.flower.rose {
+  animation-delay: 0s;
+}
+
+.flower.tulip {
+  animation-delay: 0.5s;
+}
+
+.flower.daisy {
+  animation-delay: 1s;
+}
+
+.flower.cherry {
+  animation-delay: 1.5s;
+}
+
+.flower.heart {
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Stars Display */
+.stars-display {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: var(--space-4) 0;
+  flex-wrap: wrap;
+  padding: var(--space-4);
+  background: linear-gradient(135deg, #e5d5ff 0%, #ffe5f0 100%);
+  border-radius: 8px;
+}
+
+.star {
+  font-size: 2.5rem;
+  animation: twinkle 2s ease-in-out infinite;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.star:hover {
+  transform: scale(1.3);
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Closing Message */
+.closing-message {
+  background: linear-gradient(135deg, var(--cupid-pink) 0%, var(--love-purple) 100%);
+  color: white;
+  padding: var(--space-4);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: var(--space-4) 0;
+  box-shadow: 0 6px 20px rgba(255, 77, 109, 0.2);
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--valentine-red) 0%, var(--love-purple) 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 77, 109, 0.3);
+}
+
+.btn-secondary {
+  background: var(--cupid-pink);
+  color: var(--valentine-red);
+  border: 2px solid var(--valentine-red);
+}
+
+.btn-secondary:hover {
+  background: var(--valentine-red);
+  color: white;
+  transform: translateY(-3px);
 }
 
 /* Heart animation example */
@@ -40,4 +297,56 @@
 
 .heart {
   animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .page-content {
+    margin: 1rem;
+    padding: var(--space-3);
+  }
+
+  .page-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .section-body {
+    font-size: 1rem;
+  }
+
+  .interactive-garden,
+  .stars-display {
+    gap: 1rem;
+  }
+
+  .flower {
+    font-size: 2rem;
+  }
+
+  .star {
+    font-size: 2rem;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
